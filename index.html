@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Index - MyResume Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,6 +24,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS File -->
+  <link rel="stylesheet" href="styles.css"> <!-- Ensure the correct path here -->
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -68,10 +69,10 @@
             <h2>Trinayan Swarup J P</h2>
             <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <href="#"><i class="bi bi-twitter-x"></i></a>
+              <href="#"><i class="bi bi-facebook"></i></a>
+              <href="#"><i class="bi bi-instagram"></i></a>
+              <href="#"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -523,48 +524,46 @@
                 <h3>Customer Support</h3>
               </a>
               <p>Offering reliable customer support services to help solve any issues with your digital products, ensuring smooth operation and user satisfaction.</p>
-              <a href="#" class="stretched-link"></a>
+              <href="#" class="stretched-link"></a>
             </div>
 
 
             
           </div><!-- End Service Item -->
+
+        
+
       
         </div>
       
       </div>
-    </section>
 
-    <section id="videos" class="video section">
+      <section id="videos" class="video section">
 
+        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Video and Audio</h2>
+          <h2>Video and Audio</h2>
           
-            <!-- Wrapper for video, audio, and iframe elements -->
-            <div class="video-audio-container">
-              
-              <!-- Video Section -->
-              <div>
-                <video width="520" height="440" controls>
-                  <source src="assets/img/LT.mp4" type="video/mp4">
-                </video>
-              </div>
-          
-              <!-- YouTube Video Section -->
-              <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/OHfTMfebttI" style="border: none;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-          
-              <!-- Audio Section -->
-              <div>
-                <audio controls>
-                  <source src="assets/img/Aud.mp3" type="audio/mp3">
-                </audio>
-              </div>
-              
-            </div>
-        </div>
-    </section>   
+      <div>
+        <video width="520" height="440" controls>
+          <source src="assets/img/LT.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+            
+      </div>
+      <div>
+        <iframe width="560" height="315" title="myFrame" src="https://www.youtube.com/embed/OHfTMfebttI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div>
+           
+      </div>
+      <div>
+        <audio controls>
+          <source src="assets/img/Aud.mp3" type="audio/mp3">
+      </audio>
+      
+      </div>
 
 
 
@@ -781,52 +780,55 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <footer>
     <div class="container">
-      <h3 class="sitename">Brandon Johnson</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
+    <!-- Light/Dark Mode Toggle Button -->
+    <!-- Light/Dark Mode Toggle Button -->
+<!-- Theme Toggle Button (using only an icon) -->
+<!-- Theme Toggle Button (only icon) -->
+<div class="theme-toggle-container">
+  <button id="theme-toggle" type="button" class="btn" title="Switch to dark mode">
+    <i class="bi bi-sun" id="theme-icon" aria-hidden="true"></i> <!-- Sun icon for light mode -->
+  </button>
+</div>
+
+
+
+  
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+  
+    <!-- Preloader -->
+    <div id="preloader"></div>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  
+    <script src="js/functions.js"></script>
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
 
 </body>
 
