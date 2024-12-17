@@ -12,12 +12,12 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
   
   /* Light Theme Variables */
-  --bg-color-light: #ffffff;
+  --bg-color-light: #656565;
   --text-color-light: #333333;
   --heading-color-light: #222222;
   --link-color-light: #007bff;
@@ -32,7 +32,7 @@
   --link-color-dark: #66c2ff;
   --hover-color-dark: #33aaff;
   --button-bg-dark: #444444;
-  --button-text-dark: #dddddd;
+  --button-text-dark: #000000;
   
   /* Global Colors */
   --background-color: var(--bg-color-light);
@@ -49,11 +49,14 @@ body {
   background-color: var(--background-color);
   color: var(--default-color);
   transition: background-color 0.5s, color 0.5s;
+  margin: 0;
+  padding: 0;
 }
 
 /* Headings */
 h1, h2, h3 {
   color: var(--heading-color);
+  font-family: var(--heading-font);
 }
 
 /* Links */
@@ -74,7 +77,8 @@ a:hover {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -82,28 +86,50 @@ a:hover {
   color: #fff;
 }
 
+/* Clock Container Styling */
+.clock-container {
+  position: fixed;
+  top: 10px;  /* Adjust for top positioning */
+  right: 10px;  /* Adjust for right positioning */
+  background-color: rgba(121, 121, 121, 0.7); /* Semi-transparent dark background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: var(--default-font);
+  font-size: 14px; /* Small clock size */
+  z-index: 9999; /* Ensure it's above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#current-time {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Optional: Add smooth transitions for color changes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 /* Navigation */
 .navbar {
   background-color: var(--heading-color);
+  padding: 10px 20px;
 }
 
 .navbar a {
   color: var(--heading-color);
+  font-family: var(--nav-font);
+  padding: 8px 12px;
+  text-transform: uppercase;
 }
 
 .navbar a:hover {
   color: var(--accent-color);
-}
-
-/* Dark Mode */
-body.dark-mode {
-  --background-color: var(--bg-color-dark);
-  --default-color: var(--text-color-dark);
-  --heading-color: var(--heading-color-dark);
-  --accent-color: var(--link-color-dark);
-  --hover-color-light: var(--hover-color-dark);
-  --button-bg-light: var(--button-bg-dark);
-  --button-text-light: var(--button-text-dark);
+  background-color: var(--hover-color-light);
+  text-decoration: none;
 }
 
 /* Optional: Add transitions for smoother color changes */
@@ -113,43 +139,101 @@ body {
 
 /* Position the theme toggle button at the top-left */
 .theme-toggle-container {
-  position: fixed; /* Fix the button's position */
-  top: 20px; /* Adjust the top position (distance from the top of the page) */
-  left: 20px; /* Adjust the left position (distance from the left side of the page) */
-  z-index: 9999; /* Ensure it appears above other content */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Optional: Style for the button */
 #theme-toggle {
-  padding: 8px; /* Smaller button size */
-  background-color: transparent; /* Transparent background */
+  padding: 18px; /* Increase size of the button */
+  background-color: transparent;
   border: none;
-  border-radius: 50%; /* Circular button */
-  color: var(--button-text-light); /* Light mode icon color */
-  font-size: 24px; /* Icon size */
+  border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Icon Styles */
-#theme-toggle i {
-  font-size: 24px; /* Icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px; /* Make the icon inside the button larger */
 }
 
 /* Hover effects for the button */
 #theme-toggle:hover {
-  background-color: var(--hover-color-light); /* Light mode hover color */
-  color: #fff; /* Text/icon color on hover */
+  background-color: #747474; /* Light mode hover color */
+  color: #565656;
 }
 
 /* Dark Mode Icon and Button */
 body.dark-mode #theme-toggle {
-  color: var(--button-text-dark); /* Dark mode icon color */
+  color: #767575;
+}
+
+/* Animations for Sun and Moon transition */
+@keyframes toggle-sun-to-moon {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes toggle-moon-to-sun {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+#sun-icon, #sun-rays {
+  animation: toggle-sun-to-moon 0.5s forwards;
+  filter: brightness(1.5); /* Make the sun icon brighter */
+}
+
+#moon-icon {
+  animation: toggle-moon-to-sun 0.5s forwards;
+  display: none; /* Ensure moon is hidden in light mode */
+  opacity: 1; /* Ensure moon has full opacity */
+  filter: brightness(0.8); /* Optional: make moon a bit brighter */
+}
+
+/* In dark mode, show moon icon and hide sun */
+body.dark-mode #sun-icon, body.dark-mode #sun-rays {
+  display: none;
+}
+
+body.dark-mode #moon-icon {
+  display: block;
+}
+
+/* Dark Mode Toggle Button Styles */
+body.dark-mode #theme-toggle {
+  background-color: #acacac; /* Dark mode button background */
 }
 
 body.dark-mode #theme-toggle:hover {
-  background-color: var(--hover-color-dark); /* Dark mode hover color */
-  color: #fff; /* Icon color when hovering in dark mode */
+  background-color: #555; /* Dark mode hover color */
+}
+
+/* Additional Styles for Accessibility */
+body.dark-mode {
+  --background-color: var(--bg-color-dark);
+  --default-color: var(--text-color-dark);
+  --heading-color: var(--heading-color-dark);
+  --accent-color: var(--link-color-dark);
+  --surface-color: var(--bg-color-dark);
+  --contrast-color: var(--button-text-dark);
 }
 
 /* Smooth scroll */
@@ -254,6 +338,10 @@ h6 {
   z-index: 997;
   min-width: 200px;
 }
+nav ul li a:hover {
+    color: #ff6347;
+}
+
 
 @media (max-width: 1199px) {
   .header {
@@ -626,6 +714,8 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -1562,6 +1652,17 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
+/* Style for the copyright text */
+.copyright {
+  text-align: center;  /* Centers the text */
+  font-size: 14px;     /* Sets the font size */
+  color: #888;         /* Gray color */
+  margin-top: 20px;    /* Adds space above the text */
+  margin-bottom: 20px; /* Adds space below the text */
+  font-family: Arial, sans-serif; /* Sets the font family */
+}
+
+#result {
+  font-size: 18px;
+  font-weight: bold;
+}
