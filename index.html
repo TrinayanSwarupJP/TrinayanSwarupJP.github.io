@@ -28,6 +28,12 @@
   <!-- Custom CSS File -->
   <link rel="stylesheet" href="styles.css"> <!-- Ensure the correct path here -->
 
+  <link rel="stylesheet" href="clock.css">
+  
+
+  <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/mml-chtml.min.js">
+    </script>
   <!-- =======================================================
   * Template Name: MyResume
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -40,6 +46,7 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex flex-column justify-content-center">
+    <img src="logo.png" alt="Website Logo" class="logo">
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
@@ -56,12 +63,17 @@
 
   </header>
 
+  <div id="clock" class="clock-container">
+    <h1 id="current-time">00:00:00</h1>
+  </div>
+  
+
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="">
+      <img src="assets/img/main.jpg" alt="">
 
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
@@ -69,14 +81,25 @@
             <h2>Trinayan Swarup J P</h2>
             <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
-              <href="#"><i class="bi bi-twitter-x"></i></a>
-              <href="#"><i class="bi bi-facebook"></i></a>
-              <href="#"><i class="bi bi-instagram"></i></a>
-              <href="#"><i class="bi bi-linkedin"></i></a>
-            </div>
+              <a href="https://twitter.com" target="_blank" class="social-button twitter">
+                  <i class="bi bi-twitter"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" class="social-button facebook">
+                  <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://instagram.com/" target="_blank" class="social-button instagram">
+                  <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" class="social-button linkedin">
+                  <i class="bi bi-linkedin"></i>
+              </a>
+          </div>
+          
           </div>
         </div>
       </div>
+
+      
 
     </section><!-- /Hero Section -->
 
@@ -93,7 +116,7 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/TS.jpeg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 content">
             <h2>UI/UX Designer &amp; Web Developer</h2>
@@ -112,8 +135,8 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>29</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Masters</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>tswarup@example.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
@@ -131,7 +154,7 @@
     </section><!-- /About Section -->
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    <div id="stats" class="stats section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -173,7 +196,7 @@
 
       </div>
 
-    </section><!-- /Stats Section -->
+    </div><!-- /Stats Section -->
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -345,94 +368,46 @@
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/pic5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/pic4.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/pic3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Product 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/pic2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/pic1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Branding 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/pic2.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Pic6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>App 2</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/pic2jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+            
 
           </div><!-- End Portfolio Container -->
 
@@ -524,19 +499,20 @@
                 <h3>Customer Support</h3>
               </a>
               <p>Offering reliable customer support services to help solve any issues with your digital products, ensuring smooth operation and user satisfaction.</p>
-              <href="#" class="stretched-link"></a>
+              <a href="#" class="stretched-link"></a>
+
             </div>
 
 
             
           </div><!-- End Service Item -->
-
-        
-
-      
-        </div>
-      
       </div>
+      </div>
+    </section>
+     
+
+      
+        
 
       <section id="videos" class="video section">
 
@@ -549,11 +525,9 @@
           <source src="assets/img/LT.mp4" type="video/mp4">
         </video>
       </div>
+
       <div>
-            
-      </div>
-      <div>
-        <iframe width="560" height="315" title="myFrame" src="https://www.youtube.com/embed/OHfTMfebttI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" title="myFrame" src="https://www.youtube.com/embed/OHfTMfebttI" style="border: none;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div>
            
@@ -564,7 +538,8 @@
       </audio>
       
       </div>
-
+        </div>
+      </section>
 
 
     <!-- Testimonials Section -->
@@ -573,7 +548,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+     
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -603,7 +578,7 @@
                     <div class="testimonial-content">
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                        <span>I was so impressed with the level of professionalism and the attention to detail. They understood exactly what I wanted and delivered on every promise.</span>
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                       <h3>Saul Goodman</h3>
@@ -627,7 +602,7 @@
                     <div class="testimonial-content">
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                        <span>The best decision I made was hiring this team. They not only met but exceeded my expectations, delivering excellent work on time and within budget.</span>
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                       <h3>Sara Wilsson</h3>
@@ -651,7 +626,7 @@
                     <div class="testimonial-content">
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                        <span>I couldn't be happier with the results. The service was quick, effective, and exactly what we needed. I'll definitely be working with them again.</span>
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                       <h3>Jena Karlis</h3>
@@ -675,7 +650,7 @@
                     <div class="testimonial-content">
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                        <span>The team went above and beyond to deliver a top-notch service. I'm extremely happy with the results and would recommend them to anyone looking for quality work.</span>
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                       <h3>John Larson</h3>
@@ -706,7 +681,8 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+<p>Feel free to reach out to us with any inquiries or feedback. We're here to help you with any questions or assistance you may need. Get in touch and let's start the conversation!</p>
+
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade" data-aos-delay="100">
@@ -718,7 +694,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Vilnius, LT - 10225</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -726,7 +702,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+370 567 8905</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -734,75 +710,90 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>tswarup@example.com</p>
               </div>
             </div><!-- End Info Item -->
 
           </div>
 
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
+          <form id="contactForm" onsubmit="return false;">
+            <h2>Contact Form</h2>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="q1">How satisfied are you with our website? (1-10)</label>
+            <input type="number" id="q1" name="q1" min="1" max="10" required>
+            
+            <label for="q2">How likely are you to recommend our service? (1-10)</label>
+            <input type="number" id="q2" name="q2" min="1" max="10" required>
+            
+            <label for="q3">How user-friendly is our website? (1-10)</label>
+            <input type="number" id="q3" name="q3" min="1" max="10" required>
+            
+            <label for="q4">How would you rate the content of our website? (1-10)</label>
+            <input type="number" id="q4" name="q4" min="1" max="10" required>
+            
+            <label for="q5">How likely are you to visit again? (1-10)</label>
+            <input type="number" id="q5" name="q5" min="1" max="10" required>
+            
+            <button type="button" onclick="submitForm()">Submit</button>
+          </form>
+          
+          <!-- Result Section -->
+          <section id="resultContainer">
+            <h3>Form Submission Results:</h3>
+            <div id="result"></div>
+            <p id="averageResult"></p>
+          </section>
+          
+          
+            
+                
+    </section>
+    
+      
   </main>
 
+    
+
+
   <footer>
-    <div class="container">
-      <div class="copyright">
-        <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+    
+
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" type="button" class="btn" title="Switch to dark mode">
+        <!-- SVG icons for Sun and Moon -->
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <!-- Sun Icon -->
+          <circle id="sun-icon" cx="16" cy="16" r="8" fill="yellow"/>
+          <path id="sun-rays" d="M16 3v2m0 22v2m11-11h-2m-18 0H3m2.93-7.07l-1.42 1.42m12.73 12.73l-1.42 1.42m0-18.36l1.42 1.42m-12.73 12.73l1.42 1.42" stroke="yellow" stroke-width="2"/>
+        </svg>
+        <!-- Moon Icon -->
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" style="display: none;">
+          <circle id="moon-icon" cx="20" cy="16" r="8" fill="white"/>
+          <path id="moon-phase" d="M16 16c0 3.309 2.691 6 6 6 3.309 0 6-2.691 6-6 0-3.309-2.691-6-6-6-3.309 0-6 2.691-6 6z" fill="white"/>
+        </svg>
+      </button>
     </div>
-    <!-- Light/Dark Mode Toggle Button -->
-    <!-- Light/Dark Mode Toggle Button -->
-<!-- Theme Toggle Button (using only an icon) -->
-<!-- Theme Toggle Button (only icon) -->
-<div class="theme-toggle-container">
-  <button id="theme-toggle" type="button" class="btn" title="Switch to dark mode">
-    <i class="bi bi-sun" id="theme-icon" aria-hidden="true"></i> <!-- Sun icon for light mode -->
-  </button>
-</div>
+    
 
 
 
   
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+<p class="copyright">&copy; 2024 Trinayan Swarup. All rights reserved.</p>
+
   
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
@@ -827,7 +818,42 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   
-    <script src="js/functions.js"></script>
+    <script src="functions.js"></script>
+
+    <script src="clock.js"></script>
+
+    <script src="contact.js"></script>
+
+  <!-- MathML Code for the Cauchy Integral Formula -->
+  <p>
+      <!-- Cauchy Integral Formula -->
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <!-- Function definition -->
+          <mi>f</mi><mo>(</mo><mi>a</mi><mo>)</mo>
+          <mo>=</mo>
+          <!-- Fraction -->
+          <mfrac>
+              <mn>1</mn>
+              <mrow>
+                  <mn>2</mn><mi>&#x03C0;</mi><mi>i</mi> <!-- 2πi -->
+              </mrow>
+          </mfrac>
+          <!-- Contour Integral -->
+          <mo>&#x222E;</mo> <!-- Integral symbol -->
+          <mfrac>
+              <mrow><mi>f</mi><mo>(</mo><mi>z</mi><mo>)</mo></mrow>
+              <mrow><mi>z</mi><mo>-</mo><mi>a</mi></mrow>
+          </mfrac>
+          <mi>d</mi><mi>z</mi>
+      </math>
+  </p>
+
+  
+
+  <!-- Closing paragraph -->
+  <p>
+      These equations play key roles in fields like engineering, physics, and applied mathematics.
+  </p>
   </footer>
 
 </body>
