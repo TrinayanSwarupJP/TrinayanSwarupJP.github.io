@@ -202,7 +202,29 @@
         }, 100);
       }
     }
+  });// Get the theme toggle button and the body element
+  const themeToggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
+  
+  // Check if a theme is already stored in localStorage and apply it
+  if (localStorage.getItem('theme') === 'dark') {
+    body.setAttribute('data-theme', 'dark');
+  } else {
+    body.setAttribute('data-theme', 'light');
+  }
+  
+  // Add an event listener to the toggle button
+  themeToggleButton.addEventListener('click', () => {
+    // Toggle between light and dark themes
+    if (body.getAttribute('data-theme') === 'light') {
+      body.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
   });
+  
 
   /**
    * Navmenu Scrollspy
